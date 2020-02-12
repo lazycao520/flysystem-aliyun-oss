@@ -1,5 +1,7 @@
 {
     "name": "lazycao/aliyun-oss",
+    "description": "This is a Flysystem adapter for the Aliyun OSS ~1.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "lazycao",

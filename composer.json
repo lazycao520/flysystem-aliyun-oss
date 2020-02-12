@@ -1,0 +1,23 @@
+{
+    "name": "lazycao/aliyun-oss",
+    "authors": [
+        {
+            "name": "lazycao",
+            "email": "1041242370@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "league/flysystem": "~1.0",
+        "aliyuncs/oss-sdk-php": "~2.3",
+        "illuminate/support": "^6.15"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LyCao\\Flysystem\\AliyunOss\\": "src/"
+        }
+    }
+}

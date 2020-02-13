@@ -44,9 +44,9 @@ class AliOssServiceProvider extends ServiceProvider
 
             $endPoint  = $config['endpoint']; // 默认作为外部节点
             $epInternal= $isCname?$cdnDomain:(empty($config['endpoint_internal']) ? $endPoint : $config['endpoint_internal']); // 内部节点
-
+            $prefix = empty($config['prefix']) ? '' : $config['prefix'];
             $client  = new OssClient($accessId, $accessKey, $epInternal, $isCname);
-            $adapter = new AliOssAdapter($client, $bucket, $endPoint, $isCname, $cdnDomain);
+            $adapter = new AliOssAdapter($client, $bucket, $endPoint, $isCname, $cdnDomain,$prefix);
 
             $filesystem =  new Filesystem($adapter);
 

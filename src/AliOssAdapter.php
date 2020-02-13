@@ -6,7 +6,7 @@
  * Time: 15:05
  */
 
-namespace LyCao\AliOSS;
+namespace LyCao\AliyunOss;
 
 use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\AdapterInterface;

@@ -1,8 +1,8 @@
 ### 安装
 ```$xslt
-"composer require jacobcyl/ali-oss-storage:^1.0"
+"composer require lazycao/aliyun-oss:^1.0"
 
-"lycao/ali-oss-storage": "^1.0"
+"lazycao/aliyun-oss": "^1.0"
 ```
 
 ### 配置文件

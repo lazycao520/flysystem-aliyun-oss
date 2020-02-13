@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "LyCao\\Flysystem\\AliyunOss\\": "src/"
+            "LyCao\\AliyunOss\\": "src/"
         }
     }
 }

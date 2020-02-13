@@ -66,7 +66,6 @@ class AliOssAdapter extends AbstractAdapter
 
     protected $cdnDomain;
 
-    protected $ssl;
 
     protected $isCname;
 
@@ -81,7 +80,6 @@ class AliOssAdapter extends AbstractAdapter
      * @param OssClient $client
      * @param $bucket
      * @param $endPoint
-     * @param $ssl
      * @param bool $isCname
      * @param string $cdnDomain
      * @param null $prefix
@@ -91,7 +89,6 @@ class AliOssAdapter extends AbstractAdapter
         OssClient $client,
         $bucket,
         $endPoint,
-        $ssl,
         $isCname = false,
         $cdnDomain = "",
         $prefix = null,
@@ -102,7 +99,6 @@ class AliOssAdapter extends AbstractAdapter
         $this->bucket = $bucket;
         $this->setPathPrefix($prefix);
         $this->endPoint = $endPoint;
-        $this->ssl = $ssl;
         $this->isCname = $isCname;
         $this->cdnDomain = $cdnDomain;
         $this->options = array_merge($this->options, $options);

@@ -40,17 +40,13 @@ class AliOssServiceProvider extends ServiceProvider
 
             $cdnDomain = empty($config['cdnDomain']) ? '' : $config['cdnDomain'];
             $bucket    = $config['bucket'];
-            $ssl       = empty($config['ssl']) ? false : $config['ssl'];
             $isCname   = empty($config['isCName']) ? false : $config['isCName'];
-            $debug     = empty($config['debug']) ? false : $config['debug'];
 
             $endPoint  = $config['endpoint']; // 默认作为外部节点
             $epInternal= $isCname?$cdnDomain:(empty($config['endpoint_internal']) ? $endPoint : $config['endpoint_internal']); // 内部节点
 
-            if($debug) Log::debug('OSS config:', $config);
-
             $client  = new OssClient($accessId, $accessKey, $epInternal, $isCname);
-            $adapter = new AliOssAdapter($client, $bucket, $endPoint, $ssl, $isCname, $debug, $cdnDomain);
+            $adapter = new AliOssAdapter($client, $bucket, $endPoint, $isCname, $cdnDomain);
 
             $filesystem =  new Filesystem($adapter);
 
